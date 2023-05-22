@@ -1,0 +1,76 @@
+/* NOTE writing some css for home page */
+
+.homeSection{
+
+}
+.homeSection .divImg {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width:98%;
+    
+}
+
+.divImg img{
+   border-radius: 15em;
+   transition:1s ease-in-out;
+   box-shadow: 12px 5px 50px 1px #969696;
+}
+.divImg img:hover{
+    transition: 1s ease-in-out;
+    box-shadow: 12px 5px 50px 1px rgb(1, 151, 178);
+}
+.divImg div{
+    display: block;
+    text-align: center;
+    align-self: center;
+  
+}
+.divImg hr{
+    border: 0px solid rgb(0, 0, 0);
+}
+
+.homeSection .center {
+   width:67%;
+   margin-bottom:0;
+}
+.homeSection h1{
+    overflow-y: hidden; 
+}
+
+@media (max-width:800px){
+    .homeSection{
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .homeSection .center{
+        margin-top:1em;
+      width:89%;
+      margin-bottom:1em;
+      border-radius: 15em;
+    }
+    
+    .homeSection .divImg{
+        padding-top:0em;
+        flex-direction: column-reverse;
+        align-items: center;
+        width:100%;
+    }
+    .divImg div{
+        width:90%;
+    }
+    .homeSection h1{
+        padding-top:0em;
+        font-family:"skaterdudes";
+        font-weight: lighter;
+        justify-self: center;
+        width:100%
+    }
+}
+@media (max-height:500px){
+    .homeSection h1{
+        padding-top:3em;
+    }
+}

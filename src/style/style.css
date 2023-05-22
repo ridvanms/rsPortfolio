@@ -1,0 +1,110 @@
+@import "../views/home/home.css";
+@import "../views/navigation/navigation.css";
+@import "../views/loader/loader.css";
+@import "./footer.css";
+@import "../views/about/about.css";
+@import "../views/contacts/contacts.css";
+@import "../views/projects/project.css";
+@import "../views/error404/error404.css";
+@import "../../node_modules/animate.css/animate.css";
+/* *{
+    overflow-x: hidden;
+} */
+
+@font-face {
+  font-family: "sofachrome";
+  src: url("../../asserts/shrifts/sofachrome/sofachrome\ rg\ it.otf");
+}
+@font-face {
+  font-family: "mexcellent3d";
+  src: url("../../asserts/shrifts/mexcellent/mexcellent\ 3d.otf");
+}
+@font-face {
+  font-family: "pudding-caramel";
+  src: url("../../asserts/shrifts/pudding-caramel/PuddingCaramel.otf");
+}
+@font-face {
+  font-family: "yellow-ginger";
+  src: url("../../asserts/shrifts/yellow-ginger/Yellow\ Ginger.ttf");
+}
+@font-face {
+  font-family: "skaterdudes";
+  src: url("../../asserts/shrifts/skaterdudes/SKATERDUDES.ttf");
+}
+
+h1{
+    font-size: 5vh;
+    overflow-y: hidden;
+  font-family: "sofachrome", sans-serif;
+  font-weight: 50;
+  color: #969696;
+  text-align: center;
+  -webkit-text-stroke: 2px #969696;
+  text-stroke: 2px #969696;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: 0;
+  padding-top:1em;
+}
+h2{
+    font-size: 3vh;
+    font-family:"sofachrome", 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+p{
+    color: #ACACAC;
+    font-size: 2.5vh;
+    width:100%;
+    padding:5px ;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    font-family:'yellow-ginger', 'Arial Narrow', Arial, sans-serif ;
+}
+
+body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap:wrap;
+
+    height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	color: #969696;
+
+    overflow-x: hidden;
+
+	background-color: #010101;
+    
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 4%;
+    height: 100vh;
+    width: auto;
+    padding:0;
+    margin:0;
+} 
+html{
+    width: 100%;
+}
+main{
+    width: 100%;
+    display: flex;
+}
+section{
+   
+}
+
+@media (max-width:800px){
+  
+}
+@media (max-height:500){
+   
+}
+/*  */
+
+
+
