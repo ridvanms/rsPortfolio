@@ -9,19 +9,34 @@ import { aboutPage } from "./views/about/about.js";
 import { projectsPage } from "./views/projects/projects.js";
 import { contactsPage } from "./views/contacts/contacts.js";
 import { error404Page } from "./views/error404/error404.js";
+import { loader } from "./views/loader/loader.js";
 
 const root = document.body;
 
-page(decorateContext);
-page("index.html", "/");
-page("/", homePage);
-page("/about", aboutPage);
-page("/projects", projectsPage);
-page("/projects/:id", projectsPage);
-page("/contacts", contactsPage);
+// page.exit("*", (ctx, next) => {
+//   render(loader(), root);
+//   setTimeout(() => {
+//     next();
+//   }, 2000);
+// });
+render(loader(), root);
 
-page("*", error404Page);
-page.start();
+setTimeout(() => {
+  page(decorateContext);
+  page("index.html", "/");
+  page("/", homePage);
+  page("/about", aboutPage);
+  page("/projects", projectsPage);
+  page("/projects/:id", projectsPage);
+  page("/contacts", contactsPage);
+
+  page("*", error404Page);
+  page.start();
+}, 2000);
+
+// function loader() {
+//   render(loader(), root);
+// }
 
 function renderView(content) {
   render(layoutTemplate(content), root);
@@ -32,13 +47,13 @@ function decorateContext(ctx, next) {
   next();
 }
 // NOTE simulating Click after a-tag click in nav
-document.querySelectorAll(".pt-5 a").forEach((el) => {
-  el.addEventListener("click", function () {
-    setTimeout(() => {
-      document.querySelector("header label").click();
-    }, 150);
+setTimeout(()=>{
+  document.querySelectorAll(".pt-5 a").forEach((el) => {
+    el.addEventListener("click", function () {
+      setTimeout(() => {
+        document.querySelector("header label").click();
+      }, 150);
+    });
   });
-});
-
+},2200)
 // NOTE some note
-
